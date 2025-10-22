@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Provas</title>
+</head>
+
+<body>
+    <h2>Página de Formulario em HTML</h2>
+    <h3>Exemplo 01</h3>
+    <form>
+
+        <input type="text" name="nome" placeholder="Digite seu nome" />
+        <!-- placeholder usa-se para pré escrito em campo -->
+        <input type="email" name="email" placeholder="Digite seu email" />
+        <input type="date" name="aniversario" />
+        <input type="tel" name="celular" placeholder="Digite seu celular" />
+        <input type="password" name="senha" placeholder="Digite sua senha" />
+        <button type="submit">Cadastrar</button>
+    </form>
+    <h3>Exemplo 02</h3>
+    <!-- textarea se usa para um caixa vazia como uma descrição" id="" -->
+    <textarea rows="4" cols="50">
+        "Texto livre"
+    </textarea>
+    <h3>Exemplo 03</h3>
+    <form>
+        <fieldset>
+            <legend>Formulario</legend>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" /><br /><br />
+            <label for="sex">sexo</label>
+            <input type="radio" name="sex" id="male" value="male" />
+            <label for="male">Masculino</label>
+            <input type="radio" name="sex" id="female" value="female" />
+            <label for="female">Feminino</label><br /><br />
+            <label for="country">País:</label>
+            <!-- select abre uma aba para selecionar opções -->
+            <select name="country" id="country">
+                <option value="select">Selecione uma opção</option>
+                <option value="brasil">Brasil</option>
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+                <option value="uruguai">Uruguai</option><br><br>
+            </select>
+            <br>
+            <label for="messagem">Mensagem:</label><br />
+            <textarea name="messagem" id="messagem" rows="4"></textarea><br /><br />
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <label for="newsletter">Assinar newsletter?</label><br /><br />
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+        <h3>Exemplo 04</h3>
+    <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="search" name="q">
+        <input type="submit" value="Clique aqui para pesquisar">
+    </form>
+
+</body>
+
+</html>
