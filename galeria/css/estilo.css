@@ -1,0 +1,72 @@
+body {
+    background-image: url('../imagens/capacete-ayrton-senna-senna.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Impact, Haettenschweiler, Arial Narrow Bold', sans-serif;
+    margin-top: 50px;
+    text-shadow: rgba(255, 0, 0, 0.5) 3px 3px;
+    background-color: black;
+    border:  goldenrod solid;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.imagem {
+    border: 15px solid white;
+    width: 20%;
+    height: 20%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: linear 0.25s;
+    cursor: pointer;
+}
+
+.rotacao1 {
+    transform: rotate(5deg);
+}
+
+.rotacao2 {
+    transform: rotate(-5deg);
+}
+
+.imagem:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+h1:hover {
+    text-shadow: rgba(255, 0, 0, 0.8) 3px 3px;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* Estilo do lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border: 3px solid white;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}

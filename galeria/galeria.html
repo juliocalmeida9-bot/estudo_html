@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria F1</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <h1 onclick="window.location.href='https://pt.wikipedia.org/wiki/Ayrton_Senna'">Galeria de Imagens de Fórmula 1</h1>
+    <ul>
+        <img class="imagem rotacao1" src="imagens/image1.jpg">
+        <img class="imagem rotacao2" src="imagens/image2.jpg">
+        <img class="imagem rotacao1" src="imagens/image3.jpg">
+        <img class="imagem rotacao2" src="imagens/image4.jpg">
+        <img class="imagem rotacao1" src="imagens/image5.jpg">
+        <img class="imagem rotacao2" src="imagens/image6.jpg">
+        <img class="imagem rotacao1" src="imagens/image7.jpg">
+        <img class="imagem rotacao2" src="imagens/image8.jpg">
+    </ul>
+   
+    <div class="menu">
+        <img src="imagens/menu.png" alt="Menu" width="50" onclick="window.location.href='index.html'">
+    </div>
+
+    <!-- Lightbox container -->
+    <div class="lightbox" onclick="this.classList.remove('active')">
+        <img src="" alt="Imagem ampliada">
+    </div>
+
+    <script>
+        // Seleciona todas as imagens com a classe 'imagem'
+        const imagens = document.querySelectorAll('.imagem');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+
+        // Adiciona o evento de clique em cada imagem
+        imagens.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
